@@ -11,7 +11,9 @@ class AddNoteButtonSheet extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(height: 32),
-          CustomTextField(),
+          CustomTextField(hintText: 'Title'),
+          SizedBox(height: 16),
+          CustomTextField(hintText: 'Content', maxLines: 5),
           ElevatedButton(
             onPressed: () {
               // Logic to add a new note
