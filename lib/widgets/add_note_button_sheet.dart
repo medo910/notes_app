@@ -1,10 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/widgets/custom_text_field.dart';
 
 class AddNoteButtonSheet extends StatelessWidget {
   const AddNoteButtonSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(height: 300, child: Center(child: Text('Add a new note')));
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Column(
+        children: [
+          SizedBox(height: 32),
+          CustomTextField(),
+          ElevatedButton(
+            onPressed: () {
+              // Logic to add a new note
+              Navigator.pop(context); // Close the sheet after adding
+            },
+            child: const Text('Add Note'),
+          ),
+        ],
+      ),
+    );
   }
 }
