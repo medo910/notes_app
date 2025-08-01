@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/widgets/add_note_button_sheet.dart';
 import 'package:notes_app/widgets/notes_view_body.dart';
 
@@ -21,7 +19,7 @@ class NotesView extends StatelessWidget {
             },
           );
         },
-        child: Icon(Icons.add, color: Colors.black),
+        child: const Icon(Icons.add, color: Colors.black),
         backgroundColor: const Color.fromARGB(255, 113, 191, 255),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
       ),
